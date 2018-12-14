@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <fragment
+        android:id="@+id/frag_capture"
+        android:name="com.right.tuo.scanandunlock.zxing.ui.CaptureFragment"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/background_dark" />
+
+
+    <ListView
+        android:id="@+id/lv_item"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+
+        <TextView
+            android:id="@+id/tv_bicycleNo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="条码编号" />
+
+
+        <TextView
+            android:id="@+id/tv_sensorsNo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="电子标签" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_vertical">
+
+
+        <Button
+            android:id="@+id/btn_hand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="手动" />
+
+
+        <Button
+            android:id="@+id/btn_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="录入" />
+
+        <Button
+            android:id="@+id/btn_upload"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="上传" />
+
+        <Button
+            android:id="@+id/btn_clear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="清空"
+            android:textSize="12sp" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/capture_containter"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <SurfaceView
+        android:id="@+id/capture_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/capture_crop_layout">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/sweep_bike" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/top_mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/capture_crop_layout"
+        android:background="@drawable/scan_mask"
+        android:contentDescription="@string/app_name" />
+
+    <RelativeLayout
+        android:id="@+id/capture_crop_layout"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/capture"
+        android:contentDescription="@string/app_name">
+
+        <ImageView
+            android:id="@+id/capture_scan_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/scan_line"
+            android:contentDescription="@string/app_name" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/bottom_mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/capture_crop_layout"
+        android:background="@drawable/scan_mask"
+        android:contentDescription="@string/app_name" />
+
+    <ImageView
+        android:id="@+id/left_mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_mask"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/top_mask"
+        android:layout_toLeftOf="@id/capture_crop_layout"
+        android:background="@drawable/scan_mask"
+        android:contentDescription="@string/app_name" />
+
+    <ImageView
+        android:id="@+id/right_mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_mask"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/top_mask"
+        android:layout_toRightOf="@id/capture_crop_layout"
+        android:background="@drawable/scan_mask"
+        android:contentDescription="@string/app_name" />
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/capture_crop_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="将二维码放入框内，自动扫描"
+        android:textColor="@android:color/white"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_sweep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/info"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="扫描二维码"
+        android:textColor="#02A543" />
+
+
+    <LinearLayout
+        android:id="@+id/sweep_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_sweep"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_bikeNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/figure" />
+
+        <TextView
+            android:id="@+id/tv_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:text="输入车辆编号"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/light_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_sweep"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/flashlight" />
+
+        <TextView
+            android:id="@+id/open_light_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:text="打开手电筒"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+
+</RelativeLayout>
